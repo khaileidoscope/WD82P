@@ -1,0 +1,16 @@
+h1 {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+p {
+  background-color: green;
+  color: white;
+}
+
+button {
+  background-color: orange;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}

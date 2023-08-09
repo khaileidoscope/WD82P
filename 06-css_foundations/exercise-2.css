@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  color: crimson;
+}
+
+p {
+  color: rgb(65, 65, 65);
+}
