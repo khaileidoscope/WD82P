@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+p {
+  background-color: #dde0e3;
+}
+
+em,
+strong {
+  background-color: #b2d6ff;
+}
+
+/* padding rules: clockwise: top, right, bottom left */
+/* padding rule: top-bottom, right-left */
+
+/* Border - size, style, color */
+h1 {
+  padding: 50px 20px;
+  border: 5px inset black;
+}
+
+p {
+  padding: 20px 0 20px 10px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+div {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #5995da;
+  padding: 20px;
+  border: 2px solid #5d6063;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  /* box-sizing makes the box absolute */
+  width: 100px;
+  box-sizing: border-box;
+}
+/* pseudo-selector 
+p:first-of-type {
+  padding: 5px;
+}
+
+p:last-of-type {
+  padding: 10px 5px;
+}
+*/
