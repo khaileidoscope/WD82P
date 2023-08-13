@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h-ctr {
+  background-color: burlywood;
+  border: 2px solid yellow;
+
+  color: #fff;
+  padding: 1em 8em;
+}
+
+.h-menu {
+  border: 2px solid pink;
+  display: flex;
+  justify-content: space-between;
+}
+
+.h-logo {
+  border: 2px solid black;
+  font-size: large;
+  font-weight: bold;
+}
+
+.h-items {
+  border: 2px solid orange;
+  list-style: none;
+
+  display: flex;
+}
