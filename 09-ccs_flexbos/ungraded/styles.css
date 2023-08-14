@@ -5,9 +5,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* start of header */
 .h-ctr {
-  background-color: burlywood;
   border: 2px solid yellow;
+
+  background-color: #1d3045;
 
   color: #fff;
   padding: 1em 8em;
@@ -15,19 +17,181 @@
 
 .h-menu {
   border: 2px solid pink;
+
   display: flex;
   justify-content: space-between;
 }
 
 .h-logo {
   border: 2px solid black;
-  font-size: large;
+
+  font-size: 24px;
   font-weight: bold;
 }
 
 .h-items {
   border: 2px solid orange;
-  list-style: none;
+
+  list-style-type: none;
+
+  color: #e0e0e0;
 
   display: flex;
+  gap: 1em;
+  align-items: center;
 }
+
+.items {
+}
+/* end of header */
+
+/* start of hero */
+.hero-ctr {
+  border: 2px solid rgb(255, 25, 0);
+  display: flex;
+  margin: 4em 0;
+  gap: 2em;
+  align-items: center;
+}
+
+.hero-dtls {
+  border: 2px solid white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hero-title {
+  font-size: 30px;
+}
+
+.hero-info {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.hero-btn {
+  color: #fff;
+  font-weight: bold;
+  align-self: flex-start;
+  padding: 5px 20px;
+  background-color: #368ffd;
+  border: none;
+  border-radius: 5px;
+}
+
+.hero-img {
+  border: 2px solid red;
+  align-self: flex-end;
+}
+
+.hero-banner {
+  width: 400px;
+}
+/* end of hero */
+
+/* start of main or m */
+.m-ctr {
+  padding: 1em 8em;
+}
+
+.m-title {
+  text-align: center;
+}
+
+.m-items {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0 5em 0;
+}
+
+.m-item {
+  text-align: center;
+  width: 100px;
+}
+
+.m-pic {
+  border: 2px solid #368ffd;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.m-info {
+  border: 2px solid red;
+  font-size: 10px;
+  color: #424242;
+}
+/* end of main or m */
+
+/* start of quote or q */
+.q-ctr {
+  border: 2px dashed red;
+
+  padding: 4em 8em;
+  background-color: #e0e0e0;
+}
+
+.q-msg {
+  color: #424242;
+
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.q-thor {
+  font-weight: bold;
+  text-align: end;
+
+  margin: 1em;
+}
+/* end of quote or q */
+
+/* start of cta */
+.cta-ctr {
+  border: 5px dotted black;
+
+  padding: 4em 8em;
+}
+
+.cta-card {
+border: 10px dotted darkorange;
+
+  background-color: #368ffd;
+  padding: 2em 5em;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-details {
+  color: #fff;
+}
+
+.cta-actl-btn {
+  color: #fff;
+  font-weight: bold;
+
+  padding: 5px 20px;
+  background-color: #368ffd;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+/* end of cta */
+
+/* start of footer */
+.f-ctr{
+  border: 2px solid chartreuse;
+  padding: 1.5em 8em;
+  background-color: #1d3045;
+}
+
+.f-txt{
+  color: white;
+  text-align: center;
+}
+/* end of footer */
