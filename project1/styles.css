@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-container {
+  background-color: #1b1b1b;
+}
+
+.header-menu {
+  background-color: #ffb000;
+  border-bottom: 3px solid #fff;
+}
+
+.header-logo-container{
+
+}
+
+.header-logo{
+  width: 200px;
+}
