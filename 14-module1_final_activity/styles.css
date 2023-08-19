@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.child {
+    background-color: orange;
+    text-align: center;
+    padding: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.child > div{
+    height: 50px;
+    background-color: darkred;
+    flex: 1;
+}
+
+.last-row{
+    grid-column: 1/3;
+}
