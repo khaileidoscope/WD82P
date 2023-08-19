@@ -1,31 +1,266 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.layout{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
+.page {
+  display: grid;
+  grid-template-columns: 2.5fr 7.5fr;
+  grid-template-rows: 2fr 8fr;
+  background: green;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.child {
-    background-color: orange;
-    text-align: center;
-    padding: 25px;
+.sidebar {
+  color: #fff;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background: #1992d4;
 
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
+  padding: 1.5em;
 }
 
-.child > div{
-    height: 50px;
-    background-color: darkred;
-    flex: 1;
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: #e2e8f0;
 }
 
-.last-row{
-    grid-column: 1/3;
+.sb-heading {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 4em;
+}
+
+.sb-title {
+  font-size: 24px;
+}
+
+.sb-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.sb-links > li {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.community {
+  margin-bottom: 2em;
+}
+
+.sb-links li > i {
+  width: 25px;
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background: #fff;
+
+  padding: 1.5em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-bottom {
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  flex: 1;
+}
+
+.notif-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile-link {
+  font-size: 16px;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-user-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.profile-bottom {
+  font-size: 36px;
+}
+
+.header-actions-container {
+  display: flex;
+  gap: 1em;
+}
+
+.user-icon-sm {
+  background-color: #facc15;
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.user-icon-lg {
+  background-color: #facc15;
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.welcome-user-hi {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.searchbox {
+  background-color: #e2e8f0;
+  border: none;
+  height: 30px;
+  width: 80%;
+  border-radius: 1em;
+}
+
+.header-actions-container > button {
+  padding: 0.5em 1.25em;
+  background-color: #1992d4;
+  border: none;
+  color: #fff;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  padding: 1em;
+  gap: 1em;
+}
+
+.projects {
+  flex: 3;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.important {
+  flex: 1;
+}
+
+.projects-container > article {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-left: 5px solid #f0b429;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+article div > p {
+  font-size: 11px;
+  color: gray;
+}
+
+.projects-links {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+.projects-links-container {
+  align-self: flex-end;
+}
+
+.announcement-card,
+.trending-card {
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.announcement-card h5 {
+  font-size: 12px;
+}
+
+.announcement-card p {
+  font-size: 10px;
+}
+
+hr {
+  margin: 0.5em 0;
+}
+
+.trending-container {
+  margin-top: 1em;
+}
+
+.trending-user {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.user-img {
+  height: 25px;
+  width: 25px;
+  background-color: #1992d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.trending-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }

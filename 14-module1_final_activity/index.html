@@ -1,28 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML & CSS Final Activity</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="layout">
-        <div class="child">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="child">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="child last-row">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <section class="header-top">
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="searchbox" type="text" name="search" id="search" />
+          </div>
+
+          <div class="notif-profile-container">
+            <i class="fa-solid fa-bell"></i>
+            <span class="user-icon-sm"
+              ><i class="fa-solid fa-user fa-xl"></i
+            ></span>
+            <h2 class="profile-link">Morgan Oakley</h2>
+          </div>
+        </section>
+
+        <section class="header-bottom">
+          <div class="welcome-user-container">
+            <span class="user-icon-lg"
+              ><i class="fa-solid fa-user profile-bottom"></i
+            ></span>
+            <div class="welcome-user-details">
+              <p class="welcome-user-hi">Hi there,</p>
+              <h3 class="welcome-user-name">Morgan Oakley (@morgan)</h3>
+            </div>
+          </div>
+
+          <div class="header-actions-container">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+          </div>
+        </section>
+      </header>
+
+      <aside class="sidebar">
+        <section class="sb-heading">
+          <i class="fa-brands fa-windows fa-2xl"></i>
+          <h1 class="sb-title">Dashboard</h1>
+        </section>
+
+        <section class="sb-menu">
+          <nav class="sb-nav">
+            <ul class="sb-links">
+              <li>
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-user"></i>
+                <p>Profile</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-message"></i>
+                <p>Messages</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <p>History</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-file"></i>
+                <p>Tasks</p>
+              </li>
+
+              <li class="community">
+                <i class="fa-solid fa-user-group"></i>
+                <p>Communities</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-gear"></i>
+                <p>Settings</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-question"></i>
+                <p>Support</p>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-lock"></i>
+                <p>Privacy</p>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="projects">
+          <h4>Your Projects</h4>
+          <div class="projects-container">
+            <article>
+              <div>
+                <h5>Super Cool Project</h5>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="projects-links-container">
+                <ul class="projects-links">
+                  <li><i class="fa-regular fa-star"></i></li>
+                  <li><i class="fa-regular fa-eye"></i></li>
+                  <li><i class="fa-regular fa-share-from-square"></i></li>
+                </ul>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h5>Super Cool Project</h5>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="projects-links-container">
+                <ul class="projects-links">
+                  <li><i class="fa-regular fa-star"></i></li>
+                  <li><i class="fa-regular fa-eye"></i></li>
+                  <li><i class="fa-regular fa-share-from-square"></i></li>
+                </ul>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h5>Super Cool Project</h5>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="projects-links-container">
+                <ul class="projects-links">
+                  <li><i class="fa-regular fa-star"></i></li>
+                  <li><i class="fa-regular fa-eye"></i></li>
+                  <li><i class="fa-regular fa-share-from-square"></i></li>
+                </ul>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h5>Super Cool Project</h5>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="projects-links-container">
+                <ul class="projects-links">
+                  <li><i class="fa-regular fa-star"></i></li>
+                  <li><i class="fa-regular fa-eye"></i></li>
+                  <li><i class="fa-regular fa-share-from-square"></i></li>
+                </ul>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h5>Super Cool Project</h5>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="projects-links-container">
+                <ul class="projects-links">
+                  <li><i class="fa-regular fa-star"></i></li>
+                  <li><i class="fa-regular fa-eye"></i></li>
+                  <li><i class="fa-regular fa-share-from-square"></i></li>
+                </ul>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h5>Super Cool Project</h5>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="projects-links-container">
+                <ul class="projects-links">
+                  <li><i class="fa-regular fa-star"></i></li>
+                  <li><i class="fa-regular fa-eye"></i></li>
+                  <li><i class="fa-regular fa-share-from-square"></i></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="important">
+          <div class="announcements-container">
+            <h4>Announcements</h4>
+            <article class="announcement-card">
+              <div>
+                <h5>Site Maintenance</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  necessitatibus hic recusandae.
+                </p>
+              </div>
+              <hr />
+              <div>
+                <h5>Community Share Day</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  necessitatibus hic recusandae.
+                </p>
+              </div>
+              <hr />
+              <div>
+                <h5>Updated Privacy Policy</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  necessitatibus hic recusandae.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="trending-container">
+            <h4>Trending</h4>
+            <article class="trending-card">
+              <div class="trending-user">
+                <div class="user-img"><i class="fa-solid fa-user"></i></div>
+                <div>
+                  <h6>@tegan</h6>
+                  <p>World Peace Builder</p>
+                </div>
+              </div>
+
+              <div class="trending-user">
+                <div class="user-img"><i class="fa-solid fa-user"></i></div>
+                <div>
+                  <h6>@morgan</h6>
+                  <p>Super Cool Project</p>
+                </div>
+              </div>
+
+              <div class="trending-user">
+                <div class="user-img"><i class="fa-solid fa-user"></i></div>
+                <div>
+                  <h6>@kendall</h6>
+                  <p>Life Changing App</p>
+                </div>
+              </div>
+
+              <div class="trending-user">
+                <div class="user-img"><i class="fa-solid fa-user"></i></div>
+                <div>
+                  <h6>@alex</h6>
+                  <p>No Traffic Maker</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
-</body>
+  </body>
 </html>
