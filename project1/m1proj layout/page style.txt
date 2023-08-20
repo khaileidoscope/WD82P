@@ -1,3 +1,4 @@
 background color page: #1B1B1B
-
 yellow: #ffb000
+done making the desktop version.
+mobile first 
