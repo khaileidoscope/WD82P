@@ -49,6 +49,9 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
+h4 {
+  font-size: 1.5em;
+}
 p {
   font-size: 1em;
 }
@@ -168,48 +171,85 @@ p {
 }
 
 .hello {
-    color: var(--tertiary);
+  color: var(--tertiary);
 }
 
-.name{
-    color: var(--quaternary);
+.name {
+  color: var(--quaternary);
 }
 
-.webdev{
-    color: var(--tertiary);
+.webdev {
+  color: var(--tertiary);
 }
 
-.hero-btn{
-    color: var(--quaternary);
-    border: 2px solid #ffb000;
-    border-radius: 5px;
-    font-weight: bold;
+.hero-btn {
+  color: var(--quaternary);
+  border: 2px solid #ffb000;
+  border-radius: 5px;
+  font-weight: bold;
 
-    text-align: center;
-    margin: 1em 0;
-    padding: 0.5em 1.5em;
+  text-align: center;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
 }
 
-.hero-btn:hover{
-    transition: 0.2s ease;
-    color: var(--tertiary);
-    border: 2px solid #ffffff;
-    background-color: var(--secondary);
-    box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 30px ;
+.hero-btn:hover {
+  transition: 0.2s ease;
+  color: var(--tertiary);
+  border: 2px solid #ffffff;
+  background-color: var(--secondary);
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 30px;
 }
 /* end of hero */
 
 /* start of about-me */
-.about-me-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-bottom: 2em;
 }
-.about-me-title{
-    padding-bottom: 0.3em;
+.about-me-title {
+  margin-bottom: 0.3em;
+  padding: 0.2em 0.5em;
+
+  animation: neonAnim 11s alternate-reverse infinite;
+  color: #ffffff;
 }
+@keyframes neonAnim {
+  from {
+    text-shadow: 0 0 10px #ffb600b3, 0 0 40px #ffb600b3, 0 0 100px #ffb600b3;
+  }
+  to {
+    text-shadow: 0 0 5px #ffb600b3, 0 0 20px rgba(255, 182, 0, 0.7),
+      0 0 60px #ffb600b3;
+  }
+}
+
+.about-me-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  padding: 1em;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.9);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.9);
+}
+
+.about-me-info {
+  text-align: justify;
+  font-weight: bold;
+}
+/* end of about me */
+
+
 
 /* small tablet styles */
 @media only screen and (min-width: 620px) {
