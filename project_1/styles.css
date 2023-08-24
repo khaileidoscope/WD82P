@@ -74,8 +74,8 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5em;
-  position: fixed;
-  z-index: 3;
+  /* position: fixed; */
+  /* z-index: 3; */
 }
 
 .header-logo-container {
@@ -111,7 +111,7 @@ p {
 }
 
 .dropdown-items {
-  position: fixed;
+  position: absolute;
   right: 2rem;
   top: 5.5em;
   height: 0;
@@ -161,7 +161,7 @@ p {
 }
 
 .hero-image-container {
-  margin-top: 3em;
+  /* margin-top: 3em; */
 }
 
 .hero-image {
@@ -491,16 +491,16 @@ input[type="reset"]:hover {
 }
 
 /* start of footer */
-footer{
+footer {
   border-top: 2px solid #ffb000;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 1.5em;
+  padding: 1em;
 }
 
-.f-icons{
+.f-icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -509,7 +509,7 @@ footer{
 
   font-size: 1.5em;
 }
-.f-icons a{
+.f-icons a {
   color: #ffffff;
 }
 /* end of footer */
