@@ -774,7 +774,7 @@ footer {
     align-self: unset;
     align-items: unset;
     text-align: center;
-    gap: 0;
+    gap: 1em;
     width: auto;
     padding: 0;
     /* flex: 1; */
@@ -783,6 +783,10 @@ footer {
     padding: 0;
     align-self: flex-start;
     margin: 0;
+  }
+
+  .cta-details{
+    padding: 0.5em 0;
   }
 
   .form-ctr {
