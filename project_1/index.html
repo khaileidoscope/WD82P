@@ -56,7 +56,7 @@
 
         <div class="hero-details">
           <h2 class="hello">Hello! I'm</h2>
-          <h1 class="name">John Michael Basalo</h1>
+          <h1 class="hero-name">John Michael Basalo</h1>
           <h3 class="webdev">Full-Stack Web Developer</h3>
           <a class="hero-btn" href="#">CONTACT ME</a>
         </div>
@@ -65,8 +65,8 @@
     <!-- end of hero -->
 
     <!-- start of about me -->
-    <div class="about-me-container" id="about">
-      <h4 class="about-me-title">ABOUT ME</h4>
+    <div class="about-me-container">
+      <h4 class="about-me-title" id="about">ABOUT ME</h4>
       <div class="about-me-details">
         <p class="about-me-info">
           I'm a newbie web developer with a strong passion for full-stack web
@@ -104,7 +104,7 @@
 
     <!-- start of projects -->
     <div class="article-container">
-      <h4 class="article-title">PROJECTS</h4>
+      <h4 class="article-title" id="projects">PROJECTS</h4>
       <section class="article-items">
         <div class="article-details">
           <img src="img/comingsoon.svg" alt="" />
@@ -132,18 +132,96 @@
         </div>
 
         <div class="article-details">
-          <img src="img/comingsoon.svg"alt="" />
+          <img src="img/comingsoon.svg" alt="" />
           <p class="article-info">Project 6</p>
         </div>
       </section>
     </div>
     <!-- end of projects -->
-
+    <hr />
     <!-- start of forms -->
-    <div class="forms-container">
-      <form action=""></form>
+    <div class="ctaform-container">
+      <div class="cta-ctr">
+        <h4 class="cta-title">CONTACT ME</h4>
+        <ul class="cta-info">
+          <li class="cta-details">
+            <i class="fa-regular fa-user"></i> John Michael Basalo
+          </li>
+          <li class="cta-details">
+            <i class="fa-regular fa-envelope"></i> jomaikoh+github@gmail.com
+          </li>
+          <li class="cta-details">
+            <i class="fa-solid fa-phone"></i> +63 917 691 8471
+          </li>
+          <li class="cta-details">
+            <i class="fa-solid fa-location-dot"></i> Cagayan de Oro, Philippines
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-ctr">
+        <h5 class="form-title">E-Mail Us</h5>
+        <form class="form-details" action="">
+          <p>
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="enter full name"
+              required
+            />
+          </p>
+          <p>
+            <label for="e-mail">E-Mail Address</label>
+            <input
+              type="text"
+              name="e-mail"
+              id="e-mail"
+              placeholder="enter email address"
+              required
+            />
+          </p>
+          <p>
+            <label for="phonenumber">Phone Number</label>
+            <input
+              type="tel"
+              name="phonenumber"
+              id="phonenumber"
+              placeholder="+639 123 4567"
+              required
+            />
+          </p>
+          <p>
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="enter subject"
+            />
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="enter your message here"
+              required
+            ></textarea>
+          </p>
+          <div class="buttons">
+            <input type="submit" value="SUBMIT" />
+            <input type="reset" value="RESET" />
+          </div>
+        </form>
+      </div>
     </div>
     <!-- end of forms -->
+
+    <!-- start of footer -->
 
     <!-- dropdown script -->
     <script>
