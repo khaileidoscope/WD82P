@@ -150,7 +150,7 @@ label {
 }
 
 .dropdown-items.open {
-  height: 350px;
+  height: 360px;
 }
 
 .dropdown-items .hitems a {
@@ -598,8 +598,11 @@ footer {
     left: unset;
     width: 300px;
   }
+  .dropdown-items .hitems{
+    padding: 0.8em;
+  }
   .dropdown-items.open {
-    height: 385px;
+    height: 371px;
   }
 
   /* about me */
