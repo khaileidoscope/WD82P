@@ -150,7 +150,9 @@ label {
 }
 
 .dropdown-items.open {
-  height: 360px;
+  /* height: 360px; */
+  height: auto;
+  transition: top 300ms ease-in-out 300ms;
 }
 
 .dropdown-items .hitems a {
@@ -279,7 +281,7 @@ label {
 /* start of skills */
 .skill-container {
   /* border: 2px solid white; */
-  background-image: url(img/yellow\ line.svg);
+  background-image: url(img/black\ noise.svg);
   background-size: cover;
   background-position: center;
   /* margin-bottom: -3em; */
@@ -389,6 +391,10 @@ label {
 /* start of Contact Me & Form */
 .ctaform-container {
   /* border: 2px solid forestgreen; */
+  background-image: url(img/black\ noise.svg);
+  background-size: cover;
+  background-position: center;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -543,7 +549,6 @@ footer {
 }
 .f-icons a {
   color: #ffffff;
-  
 }
 
 .f-icons a i:hover {
@@ -598,11 +603,8 @@ footer {
     left: unset;
     width: 300px;
   }
-  .dropdown-items .hitems{
-    padding: 0.8em;
-  }
   .dropdown-items.open {
-    height: 371px;
+    /* height: 385px; */
   }
 
   /* about me */
@@ -709,7 +711,7 @@ footer {
 @media only screen and (min-width: 1200px) {
   /* body em */
   body {
-    font-size: 20px;
+    font-size: 16px;
   }
   /* header */
   .header-menu {
@@ -744,6 +746,9 @@ footer {
   /* about me */
   .about-me-container {
     padding: 6em 12em;
+  }
+  .about-me-details {
+    max-width: 600px;
   }
 
   /* skills */
@@ -788,7 +793,7 @@ footer {
     margin: 0;
   }
 
-  .cta-details{
+  .cta-details {
     padding: 0.5em 0;
   }
 
