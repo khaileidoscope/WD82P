@@ -453,10 +453,10 @@ label {
   box-shadow: 0px 4px 10px 0px var(--primary);
 }
 
-.form-title {
+/* .form-title {
   align-self: flex-start;
   color: var(--tertiary);
-}
+} */
 
 .form-details {
   display: flex;
@@ -488,12 +488,15 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
+  font-size: 1em;
+  color: #ffffff;
+  text-transform: capitalize;
+
   padding: 10px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: #222;
-  color: #ffffff;
   box-shadow: 0px 1px 2px #ffbb0080, 0px 2px 4px #ffbb0080,
     0px 4px 8px #ffbb0080, 0px 8px 16px #ffbb0080;
 }
