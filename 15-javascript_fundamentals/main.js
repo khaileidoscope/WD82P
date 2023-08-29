@@ -48,3 +48,28 @@ If you type percentage in the console and press Enter you should see a value lik
 
 6.Take a few minutes to keep playing around with various things in your script tag. Eventually, we will learn how to actually make those numbers and things show up on the webpage, but all of this logic will remain the same, so make sure you’re comfortable with it before moving on.
 */
+
+//1.
+console.log(23 + 97);
+
+//2.
+console.log(1 + 2 + 3 + 4 + 5 + 6);
+
+//3.
+console.log((4 + 6 + 9) / 77);
+
+//4.
+let a = 10;
+console.log(a);
+console.log(9 * a);
+
+let b = 7 * a;
+console.log(b);
+
+//5.
+const max = 57;
+let actual = max - 13;
+let percentage = actual / max;
+console.log(percentage);
+
+//6. Done
