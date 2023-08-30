@@ -2,7 +2,7 @@
 // message = "Hello, World!";
 // var => old way of creating variables in JS
 // let => new and current way of creating variables in JS
-// const => most of the time, preferred
+// const => most of the time, preferred, static
 
 // var message = "Hello, World!";
 // console.log(message);
