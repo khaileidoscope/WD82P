@@ -60,3 +60,36 @@ console.log(a >= b); //true greater or equal
 console.log(a <= b); //false
 
 // 2. Strings
+let string = ""; //value inside "" ''
+let single = "Single quote"; //single quote ''
+let double = "Double quote"; //double quote
+let backtick = `Backtick`; //backtick ``
+
+console.log("The value of single:" + single);
+//let's not add strings
+//use template literal by using backticks
+const name = "Khail";
+const greeting = `Hello, ${name}`; //${} template literal
+
+console.log(greeting);
+
+const one = "Hello,";
+const two = "how are you?";
+const joined = `${one}, ${two}`; // you can add comma and space
+console.log(joined);
+
+const song = "Fight the Youth";
+const score = 9;
+const highestScore = 10;
+const output = `I like the song ${song}. I gave it a score of ${
+  (score / highestScore) * 100
+}%`;
+
+console.log(output);
+
+// 3. Boolean
+//true or false
+// 0 =  falsy value
+// 1 = truthy value
+//hello =  truthy value
+// "" = falsy value
