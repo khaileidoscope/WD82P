@@ -41,30 +41,31 @@ if (userLoggedIn) {
   console.log("redirect to login page");
 }
 
-// if (grade >= 75) {
-//   console.log("Pass! Exert more effort.");
-// } else if (grade >= 80) {
-//   console.log("Good! Keep it up.");
-// } else if (grade >= 85) {
-//   console.log("Very good. A job well done!");
-// } else if (grade >= 90) {
-//   console.log("Excellent!");
-// } else {
-//   console.log("Failed! Try again next quarter.");
-// }
-
-// grades
 let grade = parseInt(prompt("What is you grade?"));
 console.log(typeof grade);
 
-if (grade < 75) {
-  console.log("Failed! Try again next quarter");
-} else if (grade <= 80) {
-  console.log("Pass! Exert more effort");
-} else if (grade <= 85) {
-  console.log("Good! Keept it up.");
-} else if (grade <= 90) {
-  console.log("Very good! A job well done.");
+if (grade >= 90) {
+  console.log("Excellent!");
+} else if (grade >= 85) {
+  console.log("Very good. A job well done!");
+} else if (grade >= 80) {
+  console.log("Good! Keep it up.");
+} else if (grade >= 75) {
+  console.log("Pass! Exert more effort.");
 } else {
-  console.log("Excellent");
+  console.log("Failed! Try again next quarter.");
 }
+
+// grades
+
+// if (grade < 75) {
+//   console.log("Failed! Try again next quarter");
+// } else if (grade <= 80) {
+//   console.log("Pass! Exert more effort");
+// } else if (grade <= 85) {
+//   console.log("Good! Keept it up.");
+// } else if (grade <= 90) {
+//   console.log("Very good! A job well done.");
+// } else {
+//   console.log("Excellent");
+// }
