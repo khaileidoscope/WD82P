@@ -3,36 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Links</title>
+    <title>WD82P Library</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <ul>
-      <!-- hello world -->
-      <li><a href="01-basic_web_page/index.html">01 - Basic Web Page</a></li>
-      <!-- Index -->
-      <li><a href="02-links_and_images/">02 - Links and Images</a></li>
-      <!-- first activity -->
-      <li><a href="03-activity/">03 - First Activity</a></li>
-      <!-- Semantic HTML -->
-      <li><a href="04-semantic_html/">04 - Semantic HTML</a></li>
-      <!-- HTML FORM -->
-      <li><a href="05-html_forms/">05 - HTML_forms</a></li>
-      <!-- CSS foundations -->
-      <li><a href="06-css_foundations/">06 - css_foundations</a></li>
-      <li><a href="07-css_selectors/">07 - css_selectors</a></li>
-      <li><a href="08-css_box-model/">08 - css_box_model</a></li>
-      <li><a href="09-ccs_flexbos/">09 - css_flexbox</a></li>
-      <li><a href="10-advanced_positioning/">10 - advanced_positioning</a></li>
-      <li><a href="11-responsive_design/">11 - Responsive Design</a></li>
-      <li><a href="12-mp1_sample_project/">12 - MP1 Sample_Project</a></li>
-      <li><a href="13-css_grid/">13 - css_grid</a></li>
-      <li>
-        <a href="14-module1_final_activity/">14 - module1_final_activity</a>
-      </li>
-      <li>
-        <a href="15-javascript_fundamentals/">15 - javascript_fundamentals</a>
-      </li>
-      <li><a href="MP1/">MP1 - Major Project 1</a></li>
-    </ul>
+    <!-- start of header -->
+    <header>
+      <a href="" class="logo">Khail's Library</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="https://github.com/khaileidoscope">Profile</a></li>
+        <li>
+          <a
+            href="https://khaileidoscope.github.io/WD82P/MP1/#contact"
+            target="_blank"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <!-- start of section -->
+    <section>
+      <img src="parallax/stars.png" id="stars" />
+      <img src="parallax/moon.png" id="moon" />
+      <img src="parallax/mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">WELCOME</h2>
+      <a href="#lib" id="btn">EXPLORE</a>
+      <img src="parallax/mountains_front.png" id="mountains_front" />
+    </section>
+
+    <!-- library items -->
+    <div class="lib-container" id="lib">
+      <h2>MY LIBRARY</h2>
+      <ul>
+        <li>
+          <a href="01-basic_web_page/index.html">01 - Basic Web Page</a>
+        </li>
+        <li>
+          <a href="02-links_and_images/">02 - Links and Images</a>
+        </li>
+        <li>
+          <a href="03-activity/">03 - First Activity</a>
+        </li>
+        <li>
+          <a href="04-semantic_html/">04 - Semantic HTML</a>
+        </li>
+        <li>
+          <a href="05-html_forms/">05 - HTML_forms</a>
+        </li>
+        <li>
+          <a href="06-css_foundations/">06 - css_foundations</a>
+        </li>
+        <li>
+          <a href="07-css_selectors/">07 - css_selectors</a>
+        </li>
+        <li>
+          <a href="08-css_box-model/">08 - css_box_model</a>
+        </li>
+        <li>
+          <a href="09-ccs_flexbos/">09 - css_flexbox</a>
+        </li>
+        <li>
+          <a href="10-advanced_positioning/">10 - advanced_positioning</a>
+        </li>
+        <li>
+          <a href="11-responsive_design/">11 - Responsive Design</a>
+        </li>
+        <li>
+          <a href="12-mp1_sample_project/">12 - MP1 Sample_Project</a>
+        </li>
+        <li>
+          <a href="13-css_grid/">13 - css_grid</a>
+        </li>
+        <li>
+          <a href="14-module1_final_activity/">14 - module1_final_activity</a>
+        </li>
+        <li>
+          <a href="15-javascript_fundamentals/">15 - javascript_fundamentals</a>
+        </li>
+        <li>
+          <a href="MP1/">MP1 - Major Project 1</a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
