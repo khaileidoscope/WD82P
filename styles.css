@@ -149,6 +149,7 @@ section img#mountains_front {
   position: relative;
   padding: 100px;
   background-color: var(--darkindigo);
+  gap: 1em;
 }
 
 .lib-container h2 {
@@ -161,10 +162,24 @@ section img#mountains_front {
   display: grid;
   padding: 2em;
   gap: 1em;
+  width: auto;
   background: #2c0835;
   border-radius: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   list-style-type: none;
+}
+
+.lib-container ul:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lib-container ul li {
+  width: auto;
+  margin: 0.5em;
+  padding: 1em;
+  /* overflow-x: hidden; */
 }
 
 .lib-container ul li a {
