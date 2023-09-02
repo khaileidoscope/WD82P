@@ -9,14 +9,19 @@
 //Your code here
 let balance = 1000;
 
-let transaction1 = 500 + balance;
-let transaction2 = 200 - balance;
-let transaction3 = 1000 - balance;
+let transaction1, transaction2, transaction3;
+
+transaction1 = balance + 500;
+balance = transaction1;
+
+transaction2 = balance - 200;
+balance = transaction2;
+
+transaction3 = balance - 1000;
+balance = transaction3;
 
 // Log the final 'balance' after all three transactions.
-console.log(transaction1);
-console.log(transaction2);
-console.log(transaction3);
+console.log(balance);
 
 // Exercise 2
 // Create three variables 'testScore1', 'testScore2', and 'testScore3' and assign them different test scores as numbers.
@@ -28,10 +33,10 @@ let testScore1 = 85;
 let testScore2 = 75;
 let testScore3 = 96;
 
-let averageScore = (testScore1 + testScore2 + testScore3) / 3;
+let averageScore = Math.round((testScore1 + testScore2 + testScore3) / 3);
 
 // Log the 'averageScore' to the console.
-console.log(Math.round(averageScore));
+console.log(averageScore);
 
 // Exercise 3
 // Create a variable called 'temperature' and assign it a temperature value in Celsius.
