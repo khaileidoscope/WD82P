@@ -20,4 +20,7 @@
 // let str1 = "Hello";
 // let str2 = "World";
 // let message = str1.push(str2); //push is only used in an array which is str1 is not
- 
+
+//take this course: https://developer.chrome.com/docs/devtools/javascript/
+
+//Clean Code
