@@ -24,3 +24,46 @@
 //take this course: https://developer.chrome.com/docs/devtools/javascript/
 
 //Clean Code
+// -> A code that is easy to read, understand and write.
+// -> A code that is easy to maintain.
+// -> A code that is easy to extend.
+
+// Naming functions and variables
+// -> meaningful
+// -> descriptive
+// -> avoid reserved words
+// -> avoid using single letters
+
+// Use a consistent vocabulary or naming convention
+// Good
+// function getPlayerScore();
+// function getPlayerName();
+// function getPlayerTag();
+
+// // Bad
+// function getUserScore();
+// function fetchPlayerName();
+// function retrievePlayerTag();
+
+// Good
+const MILLISECONDS_PER_HOUR = 60 * 60 * 1000; // 3,600,000
+
+// Indentation and Line Length
+
+// Line length
+// let reallyReallyLongLine =
+//   something +
+//   somethingElse +
+//   anotherThing +
+//   howManyTraces +
+//   oneMoreReallyLongThing;
+
+// Bad
+function myFunction() {}
+
+// Good
+function calculateBMI(height, weight) {
+  return weight / (height * height);
+}
+
+// MUST READ!!! --> https://github.com/airbnb/javascript
