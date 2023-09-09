@@ -1,0 +1,63 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game {
+  display: grid;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-content: center; */
+  width: 60%;
+  height: 100dvh;
+  margin: 0 auto;
+  /* background-color: blue; */
+}
+
+.scoreboard-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.scoreboard-container div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+}
+
+.scoreboard-container h1 {
+  font-size: 20px;
+}
+
+.scoreboard-container p {
+  font-size: 32px;
+}
+
+.turns-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  font-size: 50px;
+  gap: 2em;
+}
+
+.weapons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.weapons-container button {
+  padding: 1em;
+  background: none;
+  cursor: pointer;
+}
+
+.weapons-container button:hover {
+  background-color: aliceblue;
+}
