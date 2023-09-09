@@ -15,17 +15,50 @@ weaponButtons.forEach((option) => {
   option.addEventListener("click", () => {
     computer.classList.add("shakeComputer");
     player.classList.add("shakePlayer");
-
+    // animation
     setTimeout(() => {
       computer.classList.remove("shakeComputer");
       player.classList.remove("shakePlayer");
-
+      // change images
       player.src = "./img/" + option.innerHTML + "Player.svg";
-
+      // computer choice
       const weaponOfChoice = ["ROCK", "PAPER", "SCISSOR"];
       let randomChoice = Math.floor(Math.random() * 3);
       let computerChoice = weaponOfChoice[randomChoice];
       computer.src = "./img/" + computerChoice + "Computer.svg";
+
+      let computerPoints = parseInt(computerScoreLabel.innerHTML);
+      let playerPoints = parseInt(userScoreLabel.innerHTML);
+      let tiePoints = parseInt(tieScoreLabel.innerHTML);
+
+      // logic for game
+      if (option.innerHTML === "ROCK") {
+        if (computerChoice === "ROCK") {
+          tieScoreLabel.innerHTML = tiePoints + 1;
+        } else if (computerChoice === "PAPER") {
+          computerScoreLabel.innerHTML = computerPoints + 1;
+        } else {
+          userScoreLabel.innerHTML = playerPoints + 1;
+        }
+      }
+      if (option.innerHTML === "PAPER") {
+        if (computerChoice === "PAPER") {
+          tieScoreLabel.innerHTML = tiePoints + 1;
+        } else if (computerChoice === "SCISSOR") {
+          computerScoreLabel.innerHTML = computerPoints + 1;
+        } else {
+          userScoreLabel.innerHTML = playerPoints + 1;
+        }
+      }
+      if (option.innerHTML === "SCISSOR") {
+        if (computerChoice === "SCISSOR") {
+          tieScoreLabel.innerHTML = tiePoints + 1;
+        } else if (computerChoice === "ROCK") {
+          computerScoreLabel.innerHTML = computerPoints + 1;
+        } else {
+          userScoreLabel.innerHTML = playerPoints + 1;
+        }
+      }
     }, 900);
   });
 });
