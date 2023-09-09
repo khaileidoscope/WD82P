@@ -1,0 +1,103 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* variables */
+:root {
+  --primary: #fac16b;
+  --secondary: #fde4bf;
+  --accent: #e98e07;
+  --background: #fffbf5;
+  --text: #190f01;
+}
+
+/* base styles */
+body {
+  font-family: "Lato Regular";
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* FONT */
+@font-face {
+  font-family: "Lato Regular";
+  src: url(Font/Lato-Regular.ttf);
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 4em;
+}
+h3 {
+  font-size: 1.5em;
+}
+p {
+  font-size: 1em;
+}
+
+/* game container */
+.game-ctr {
+  background: var(--primary);
+  border: 5px solid var(--accent);
+  border-radius: 2em;
+  padding: 5em 3em;
+  margin: 5% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 1em;
+}
+/* turns container */
+.turns-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+}
+
+/* scoreboard container */
+.scoreboard-container{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* gap: 1em; */
+    padding: 1em;
+}
+
+.player-score-container,
+.tie-score-container,
+.computer-score-container{
+
+}
+
+/* weapon container */
+.weapons-container{
+    display: flex;
+    gap: 1em;
+}
+
+.weapons-container button{
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 10px;
+}
