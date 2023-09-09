@@ -60,7 +60,10 @@ p {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
 /* screen container */
 .screen-container {
   display: flex;
@@ -140,15 +143,19 @@ p {
   width: 100%;
 }
 
-#player-turn-image img {
+/* .player-turn {
   position: relative;
   left: -10px;
-  animation: shakeplayer 1s linear;
 }
-#computer-turn-image img {
+.computer-turn {
   position: relative;
   right: -10px;
-  animation: shakecomputer 1s linear;
+} */
+.shakePlayer {
+  animation: shakePlayer 0.8s linear;
+}
+.shakeComputer {
+  animation: shakeComputer 0.8s linear;
 }
 
 /* weapon container */
@@ -202,7 +209,7 @@ p {
 }
 
 /* keyframes shake player */
-@keyframes shakeplayer {
+@keyframes shakePlayer {
   0% {
     transform: rotate(-30deg);
   }
@@ -217,8 +224,8 @@ p {
   }
 }
 
-/* keyframes share computer */
-@keyframes shakecomputer {
+/* keyframes shake computer */
+@keyframes shakeComputer {
   0% {
     transform: rotate(30deg);
   }
