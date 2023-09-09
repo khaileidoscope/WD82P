@@ -8,39 +8,49 @@
   </head>
   <body>
     <div class="game-ctr">
-      <!-- title -->
-      <div class="title">
-        <img src="img/rps-title.svg" alt="rps-title" />
-        <h1 class="game-title">Rock · Paper · Scissors</h1>
+      <!-- turn container and title -->
+      <div class="screen-container">
+        <div class="scoreboard-turns-screen">
+        <!-- scoreboard container -->
+        <section class="scoreboard-container">
+          <div class="player-score-container">
+            <h3>Player</h3>
+            <p id="player-score-label">0</p>
+          </div>
+          <div class="tie-score-container">
+            <h3>Draw</h3>
+            <p id="tie-score-label">0</p>
+          </div>
+          <div class="computer-score-container">
+            <h3>Computer</h3>
+            <p id="computer-score-label">0</p>
+          </div>
+        </section>
+        <!-- turns container -->
+        <section class="turns-container">
+          <div class="player-turn-container">
+            <div id="player-turn-image">
+              <img src="img/player-rock.svg" alt="player-rock" />
+            </div>
+            <h4>YOU</h4>
+          </div>
+          <div class="versus-container">
+            <img src="img/versus.svg" alt="" />
+          </div>
+          <div class="computer-turn-container">
+            <div id="computer-turn-image">
+              <img src="img/computer-rock.svg" alt="computer-rock" />
+            </div>
+            <h4>COMPUTER</h4>
+          </div>
+        </div>
+        </section>
+
+        <!-- title -->
+        <div class="title">
+          <h1 class="game-title">Rock·Paper·Scissors</h1>
+        </div>
       </div>
-
-      <!-- turns container -->
-      <section class="turns-container">
-        <div class="player-turn-container">
-          <h2 id="player-turn-label">#</h2>
-          <p>YOU</p>
-        </div>
-        <div class="computer-turn-container">
-          <h2 id="computer-turn-label">#</h2>
-          <p>COMPUTER</p>
-        </div>
-      </section>
-
-      <!-- scoreboard container -->
-      <section class="scoreboard-container">
-        <div class="player-score-container">
-          <h3>Player</h3>
-          <p id="player-score-label">0</p>
-        </div>
-        <div class="tie-score-container">
-          <h3>Draw</h3>
-          <p id="tie-score-label">0</p>
-        </div>
-        <div class="computer-score-container">
-          <h3>Computer</h3>
-          <p id="computer-score-label">0</p>
-        </div>
-      </section>
 
       <!-- weapons container -->
       <section class="weapons-container">

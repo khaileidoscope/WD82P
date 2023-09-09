@@ -8,16 +8,16 @@
 
 /* variables */
 :root {
-  --primary: #fac16b;
-  --secondary: #fde4bf;
-  --accent: #e98e07;
-  --background: #fffbf5;
-  --text: #190f01;
+  --text: #eae5f5;
+  --background: #cecece;
+  --primary: #4f50db;
+  --secondary: #23252d;
+  --accent: #7855be;
 }
 
 /* base styles */
 body {
-  font-family: "Lato Regular";
+  font-family: "PressStart2P";
   color: var(--text);
   background-color: var(--background);
 }
@@ -26,27 +26,35 @@ body {
 @font-face {
   font-family: "Lato Regular";
   src: url(Font/Lato-Regular.ttf);
+
+  font-family: "PressStart2P";
+  src: url(Font/PressStart2P-Regular.ttf);
 }
 h1 {
-  font-size: 2em;
+  font-size: 0.7em;
 }
 h2 {
   font-size: 4em;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 0.7em;
+}
+h4 {
+  font-size: 0.9em;
 }
 p {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 /* game container */
 .game-ctr {
   background: var(--primary);
-  border: 5px solid var(--accent);
+  border-top: 8px solid var(--secondary);
   border-radius: 2em;
-  padding: 5em 3em;
-  margin: 5% 20%;
+  padding: 3em;
+  width: 40%;
+  height: 100%;
+  margin: 2% 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +62,51 @@ p {
   gap: 2em;
 }
 
+/* screen container */
+.screen-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 2em;
+  padding: 2em 2em 0.5em 2em;
+  gap: 1em;
+  z-index: 100;
+}
+/* scoreboard and turn screen container */
+.scoreboard-turns-screen {
+  background-color: #929d97;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2em 0;
+}
+/* scoreboard container */
+.scoreboard-container {
+  display: flex;
+  /* width: 50%; */
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  gap: 2em;
+  padding: 1em;
+}
+
+.player-score-container,
+.tie-score-container,
+.computer-score-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+/* title */
 .title {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,41 +115,121 @@ p {
   letter-spacing: 5px;
   padding: 1em;
 }
+
 /* turns container */
 .turns-container {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1em;
+  /* padding: 1em; */
+  /* border: 5em solid var(--secondary); */
 }
 
-/* scoreboard container */
-.scoreboard-container{
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    /* gap: 1em; */
-    padding: 1em;
+.player-turn-container,
+.computer-turn-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 1em;
 }
 
-.player-score-container,
-.tie-score-container,
-.computer-score-container{
+/* images */
+.turns-container img {
+  width: 100%;
+}
 
+#player-turn-image img {
+  position: relative;
+  left: -10px;
+  animation: shakeplayer 1s linear;
+}
+#computer-turn-image img {
+    position: relative;
+    right: -10px;
+  animation: shakecomputer 1s linear;
 }
 
 /* weapon container */
-.weapons-container{
-    display: flex;
-    gap: 1em;
+.weapons-container {
+  display: flex;
+  gap: 1.5em;
+  padding: 1em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.weapons-container button{
-    font-size: 2em;
-    padding: 10px;
-    border-radius: 10px;
+.weapons-container button {
+  display: inline-block;
+  text-align: center;
+  color: var(--secondary);
+  font-weight: bolder;
+  font-size: 1em;
+  text-shadow: 0px -1px 0px #3436bf;
+  background-color: var(--primary);
+  border: transparent;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 4em;
+    height: 2em;
+    margin-bottom: 5px;
+    border-radius: 40%;
+    background: linear-gradient(
+      to bottom,
+      #0b0a1c 0%,
+      #0b0a1c 30%,
+      #62636c 70%,
+      #62636c 100%
+    );
+    background-repeat: no-repeat;
+    border: 2px solid #0b0a1c;
+    box-shadow: 0px -2px 1px #8482e9;
+    cursor: pointer;
+  }
+  &:active::before {
+    background: linear-gradient(
+      to bottom,
+      #0b0a1c 0%,
+      #0b0a1c 50%,
+      #62636c 100%
+    );
+  }
+}
+
+/* keyframes shake player */
+@keyframes shakeplayer {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* keyframes share computer */
+@keyframes shakecomputer {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
