@@ -6,6 +6,8 @@
 let numbers = [1, 2, 3, 4, 5];
 
 function findLargestNumber(numbers) {
+  if (numbers.length === 0) return undefined;
+
   let largestNum = numbers[0];
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] > largestNum) {
