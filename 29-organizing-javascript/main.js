@@ -31,8 +31,23 @@ function personFactory(name, marker) {
 const playerFive = personFactory("Jiggly", "C");
 console.log(playerFive);
 
-// 4. Module Pattern
+// September 21, 2023 Part2 or Continuation of Topic");
 
-// 5. Classes
+// 4. Classes
+class Dog {
+  constructor(breed, color) {
+    this.breed = breed;
+    this.color = color;
+  }
+
+  bark() {
+    console.log("Woof!");
+  }
+}
+
+const dog1 = new Dog("Labrador", "Black");
+console.log(dog1);
+
+// 5. Module Pattern
 
 // 6. ES6 Modules
