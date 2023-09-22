@@ -16,7 +16,8 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 1em;
 }
 
 .photo-container {
@@ -27,12 +28,14 @@
 }
 
 .photo {
-  width: 50px;
+  width: 20%;
+  max-width: 50px;
   mix-blend-mode: multiply;
 }
 
 img {
   align-self: center;
-  width: 250px;
+  width: 50%;
+  max-width: 250px;
   mix-blend-mode: darken;
 }
