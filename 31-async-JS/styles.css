@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.shopping-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  list-style-type: none;
+}
+
+.shop-item {
+  background-color: antiquewhite;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.photo {
+  width: 50px;
+  mix-blend-mode: multiply;
+}
+
+img {
+  align-self: center;
+  width: 250px;
+  mix-blend-mode: darken;
+}
