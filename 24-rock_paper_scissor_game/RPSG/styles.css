@@ -8,11 +8,11 @@
 
 /* variables */
 :root {
-  --text: #eae5f5;
-  --background: #cecece;
-  --primary: #4f50db;
-  --secondary: #23252d;
-  --accent: #7855be;
+  --text: #060f07;
+  --background: #e5f5e7;
+  --primary: #2c775d;
+  --secondary: #cbe7ec;
+  --accent: #3f9bab;
 }
 
 /* base styles */
