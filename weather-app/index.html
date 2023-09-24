@@ -4,24 +4,49 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mooli&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
   </head>
   <body>
-    <section class="main">
-      <form id="form-weather">
+    <div id="app">
+      <h1>Weather App</h1>
+      <form id="search-form">
         <input
+          id="search-input"
           type="text"
-          id="weather-input"
-          spellcheck="false"
-          placeholder="Enter Your City"
-          name="weather-input"
+          placeholder="Enter City: e.g. Manila"
         />
-        <button id="search-weather-btn" type="submit">Search</button>
+        <button type="submit">SEARCH</button>
       </form>
-      <div id="app"></div>
-    </section>
+      <article id="card">
+        <div id="weather-icon-container">
+          <img
+            id="weather-icon"
+            src="src/question.gif"
+            alt="an image of current weather"
+          />
+        </div>
 
-    <script src="/main.js"></script>
+        <div id="weather-data-container">
+          <h2 id="weather-temp"></h2>
+          <p id="weather-type">How's The Weather Today?</p>
+          <p id="date"></p>
+        </div>
+      </article>
+    </div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
