@@ -28,7 +28,7 @@
 
 import fetchData from "./src/fetchData";
 import displayData from "./src/displayData";
-import "./style.css";
+import "./styles.css";
 
 // event listener
 const form = document.getElementById("search-form");
