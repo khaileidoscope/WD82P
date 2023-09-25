@@ -1,0 +1,10 @@
+
+john - alvin
+
+
+requirements:
+
+1. API application - look for free API on github
+2. HTML, CSS, JavaScript - must have
+3. Hosted on GitHub Pages
+ 4. Communicate and be productive
