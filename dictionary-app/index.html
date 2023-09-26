@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dictionary App</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- title -->
+      <h1 class="title">English Dictionary</h1>
+      <div class="dictionary-container">
+        <!-- start of search box input -->
+        <form class="search-box">
+          <input type="text" id="search-input" placeholder='"Enter Keyword"' />
+          <!-- search btn -->
+          <button id="search-btn">
+            SEARCH
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <!-- close btn -->
+          <i id="close-btn" class="fa-solid fa-xmark"></i>
+        </form>
+
+        <!-- instruction for entering the keyword -->
+        <p class="text-info">
+          Please give me a word and I'll find its meaning, example, synonyms,
+          and more for you. Just type it in and hit ENTER!
+        </p>
+        <!-- start of word container -->
+        <div class="word-container">
+          <!-- keyword entered -->
+          <ul>
+            <li class="word-keyword">
+              <div class="details">
+                <h2>KEYWORD</h2>
+                <button alt="text-to-speech">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+            </li>
+            <li class="word-type">
+              <div class="details">
+                <p>noun</p>
+                <span>/pronunciation/</span>
+              </div>
+            </li>
+
+            <div class="word-content">
+              <!-- partOfSpeech and Phonetics as types -->
+
+              <!-- meaning of keyword -->
+              <li class="word-meaning">
+                <div class="details">
+                  <h3>Meaning:</h3>
+                  <span>Meaning of the keyword entered</span>
+                </div>
+              </li>
+              <!-- sentence samples -->
+              <li class="word-samples">
+                <div class="details">
+                  <h3>Example:</h3>
+                  <span> A sentence sample of keyword. </span>
+                </div>
+              </li>
+              <!-- synonyms of keyword -->
+              <li class="word-synonyms">
+                <div class="details">
+                  <h3>Synonyms</h3>
+                  <div class="synonyms-list">
+                    <span>similar,</span>
+                    <span>similar,</span>
+                    <span>similar,</span>
+                    <span>similar,</span>
+                  </div>
+                </div>
+              </li>
+              <!-- antonyms of keyword -->
+              <li class="word-antonyms">
+                <div class="details">
+                  <h3>Antonyms</h3>
+                  <div class="antonyms-list">
+                    <span>opposite,</span>
+                    <span>opposite,</span>
+                    <span>opposite,</span>
+                    <span>opposite</span>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="signature">
+        <p>Coded by <span>Khail</span> & <span>Alvin</span></p>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
