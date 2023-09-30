@@ -58,3 +58,5 @@ Day 40: https://www.youtube.com/watch?v=D3ioKJxxUtA
 Day 41: https://www.youtube.com/watch?v=e8fDaqTLaw4
 Day 42: https://www.youtube.com/watch?v=e0Tb8s6_tKQ
 Day 43: https://www.youtube.com/watch?v=ia-yjYWeTE8
+
+Day 44: async w/ recording
