@@ -60,3 +60,4 @@ Day 42: https://www.youtube.com/watch?v=e0Tb8s6_tKQ
 Day 43: https://www.youtube.com/watch?v=ia-yjYWeTE8
 
 Day 44: async w/ recording uploaded on youtube
+Dat 45: async final for MP2
