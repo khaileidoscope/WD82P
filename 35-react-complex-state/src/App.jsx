@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import Button from "./components/Button";
+import Display from "./components/Display";
+import History from "./components/History";
 
 function App() {
   // const [left, setLeft] = useState(0);
@@ -9,29 +12,37 @@ function App() {
     right: 0,
   });
 
+  const [allClicks, setAllClicks] = useState([]);
+  const [total, setTotal] = useState(0);
+
   const handleLeftClick = () => {
     const newClicks = {
+      ...clicks,
       left: clicks.left + 1,
-      right: clicks.right,
     };
-
     setClicks(newClicks);
+    setAllClicks(allClicks.concat("L"));
+    setTotal(newClicks.left + newClicks.right);
   };
+
   const handleRightClick = () => {
     const newClicks = {
       left: clicks.left,
       right: clicks.right + 1,
     };
-
     setClicks(newClicks);
+    setAllClicks(allClicks.concat("R"));
+    setTotal(newClicks.left + newClicks.right);
   };
 
   return (
     <div>
-      <p>{clicks.left}</p>
-      <button onClick={handleLeftClick}>left</button>
-      <p>{clicks.right}</p>
-      <button onClick={handleRightClick}>right</button>
+      <Display value={clicks.left} />
+      <Button handleClick={handleLeftClick} text="left" />
+      <Display value={clicks.right} />
+      <Button handleClick={handleRightClick} text="right" />
+      <History allClicks={allClicks} />
+      <Display value={total} text="Total:" />
     </div>
   );
 }
