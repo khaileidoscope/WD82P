@@ -70,16 +70,13 @@
     <!-- animated css -->
 
     <div id="app">
+      <audio id="sound"></audio>
       <div class="dictionary-container">
         <!-- title -->
         <h1 class="title">English Dictionary</h1>
         <!-- start of search box input -->
         <form class="search-box">
-          <input
-            id="search-input"
-            type="text"
-            placeholder='"Enter Keyword"'
-          />
+          <input id="search-input" type="text" placeholder='"Enter Keyword"' />
           <!-- search btn -->
           <button id="search-btn">
             SEARCH
@@ -100,7 +97,7 @@
           <ul>
             <li class="word-keyword">
               <div class="details">
-                <h2>KEYWORD</h2>
+                <h2 id="keyword">KEYWORD</h2>
                 <button alt="text-to-speech">
                   <i class="fas fa-volume-up"></i>
                 </button>
@@ -108,80 +105,44 @@
             </li>
             <li class="word-type">
               <div class="details">
-                <span>/pronunciation/</span>
+                <span id="pronunciation">/pronunciation/</span>
               </div>
             </li>
 
             <div class="word-content">
               <!-- partOfSpeech -->
               <li class="word-speech">
-                <h4>partOfSpeech 1</h4>
+                <h4 id="partOfSpeech">POS</h4>
               </li>
               <!-- meaning of keyword -->
               <li class="word-meaning">
+                <h3>Meaning:</h3>
                 <div class="details">
-                  <h3>Meaning:</h3>
-                  <span></span>
+                <p id="meaning">test</p>
                 </div>
               </li>
               <!-- sentence samples -->
               <li class="word-samples">
+                <h3 >Example:</h3>
                 <div class="details">
-                  <h3>Example:</h3>
-                  <span> </span>
+                  <span id="example">test</span>
                 </div>
               </li>
               <!-- synonyms of keyword -->
               <li class="word-synonyms">
+                <h3>Synonyms</h3>
                 <div class="details">
-                  <h3>Synonyms</h3>
                   <div class="synonyms-list">
-                    <span>r</span>
+                    <span id="synonym">test</span>
                   </div>
                 </div>
               </li>
               <!-- antonyms of keyword -->
               <li class="word-antonyms">
+                <h3>Antonyms</h3>
                 <div class="details">
-                  <h3>Antonyms</h3>
                   <div class="antonyms-list">
-                    <span></span>
-                  </div>
-                </div>
-              </li>
-              <!-- 2nd definition -->
-              <li class="word-speech">
-                <h4>partOfSpeech 2</h4>
-              </li>
-              <!-- meaning of keyword -->
-              <li class="word-meaning">
-                <div class="details">
-                  <h3></h3>
-                  <span></span>
-                </div>
-              </li>
-              <!-- sentence samples -->
-              <li class="word-samples">
-                <div class="details">
-                  <h3>Example:</h3>
-                  <span> </span>
-                </div>
-              </li>
-              <!-- synonyms of keyword -->
-              <li class="word-synonyms">
-                <div class="details">
-                  <h3>Synonyms</h3>
-                  <div class="synonyms-list">
-                    <span>similar</span>
-                  </div>
-                </div>
-              </li>
-              <!-- antonyms of keyword -->
-              <li class="word-antonyms">
-                <div class="details">
-                  <h3>Antonyms</h3>
-                  <div class="antonyms-list">
-                    <span>opposite</span>
+                    <span id="antonym">test</span>
                   </div>
                 </div>
               </li>

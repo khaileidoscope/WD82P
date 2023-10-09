@@ -157,7 +157,7 @@ button:active {
 }
 
 .word-container {
-  display: none;
+  /* display: none; */
   padding-top: 1em;
 }
 
