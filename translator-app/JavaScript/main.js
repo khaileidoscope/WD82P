@@ -1,5 +1,5 @@
-import "/Styles/style.css";
-import "/Styles/animated.css";
+import "/styles/style.css";
+import "/styles/animated.css";
 import { countries } from "./countries.js"; //data-object
 
 const fromText = document.querySelector(".from-text");
@@ -54,7 +54,7 @@ translateBtn.addEventListener("click", () => {
   fetch(apiUrl)
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data);
+      console.log(data);
       toText.value = data.responseData.translatedText;
       data.matches.forEach((data) => {
         if (data.id === 0) {
