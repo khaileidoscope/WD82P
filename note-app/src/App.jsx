@@ -15,7 +15,7 @@ function App(props) {
         ))}
       </ul>
 
-      <h1>Web development curriculum</h1>
+      {/* <h1>Web development curriculum</h1>
       <h2 key={courses.id}>{courses[0].name}</h2>
         {courses[0].parts.map((part) => (
           <p key={part.id}>{part.name} {part.exercises}</p>
@@ -26,7 +26,24 @@ function App(props) {
       {courses[1].parts.map((part) => (
         <p key={part.id}>{part.name} {part.exercises}</p>
       ))}
-      <h3>total of {courses[1].parts.reduce((total, part) => total + part.exercises, 0)} exercises</h3>
+      <h3>total of {courses[1].parts.reduce((total, part) => total + part.exercises, 0)} exercises</h3> */}
+
+      <h1>Web development curriculum</h1>
+      {courses.map((course, index) => (
+        <div key={index}>
+          <h2>{course.name}</h2>
+          {course.parts.map((part) => (
+            <p key={part.id}>
+              {part.name} {part.exercises}
+            </p>
+          ))}
+          <h3>
+            total of{" "}
+            {course.parts.reduce((total, part) => total + part.exercises, 0)}{" "}
+            exercises
+          </h3>
+        </div>
+      ))}
     </div>
   );
 }
