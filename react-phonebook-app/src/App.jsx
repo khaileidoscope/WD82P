@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import Person from "./components/Person";
+import PersonForm from "./components/PersonForm";
+import Search from "./components/Search";
 
 function App() {
   const [contacts, setContacts] = useState([
@@ -15,63 +18,30 @@ function App() {
     },
   ]);
 
-  const [newName, setNewName] = useState("");
-  const [newNumber, setNewNumber] = useState("");
-
-  const addContact = (event) => {
-    event.preventDefault();
-
-    const newNameObj = {
-      id: contacts.length + 1,
-      name: newName,
-      number: newNumber,
-    };
-
-    setContacts([...contacts, newNameObj]);
-    setNewName("");
-    setNewNumber("");
-  };
-
-  const handleNewName = (event) => {
-    setNewName(event.target.value);
-  };
-
-  const handleNewNumber = (event) => {
-    setNewNumber(event.target.value);
-  };
+  const [results, setResults] = useState(contacts);
 
   return (
     <div>
       <h1>Phonebook App</h1>
 
-      <form onSubmit={addContact}>
-        <div>
-          name:{" "}
-          <input
-            value={newName}
-            onChange={handleNewName}
-            type="text"
-            required
-          />
-        </div>
-        <div>
-          number:{" "}
-          <input
-            value={newNumber}
-            onChange={handleNewNumber}
-            type="number"
-            required
-          />
-        </div>
-        <button type="submit">add</button>
-      </form>
+      <Search contacts={contacts} setResults={setResults} />
 
-      <h1>Numbers</h1>
+      <h2>add a new</h2>
+      <PersonForm
+        contacts={contacts}
+        setContacts={setContacts}
+        setResults={setResults}
+        results={results}
+      />
+
+      <h2>Numbers</h2>
       <ul>
-        {contacts.map((contact) => (
-          <li key={contact.id}>
-            {contact.name} {contact.number}
-          </li>
+        {results.map((contact) => (
+          <Person
+            key={contact.id}
+            name={contact.name}
+            number={contact.number}
+          />
         ))}
       </ul>
     </div>
