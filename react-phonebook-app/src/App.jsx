@@ -1,24 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Person from "./components/Person";
 import PersonForm from "./components/PersonForm";
 import Search from "./components/Search";
+import personService from "./services/persons";
 
 function App() {
-  const [contacts, setContacts] = useState([
-    {
-      id: 1,
-      name: "Arto Hellas",
-      number: "040-123456",
-    },
-    {
-      id: 2,
-      name: "Ada Lovelace",
-      number: "39-44-5323523",
-    },
-  ]);
-
+  const [contacts, setContacts] = useState([]);
   const [results, setResults] = useState(contacts);
+
+  // const fetchContacts = async () => {
+  //   const response = await axios.get("http://localhost:3001/contacts");
+
+  //   setContacts(data);
+  //   setResults(data);
+  // };
+
+  useEffect(() => {
+    personService.getAll().then((response) => {
+      setContacts(response.data);
+      setResults(response.data);
+    });
+  }, []);
 
   return (
     <div>

@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
+import personService from "../services/persons";
 
 function PersonForm({ setContacts, setResults, contacts, results }) {
   const [newName, setNewName] = useState("");
@@ -13,10 +15,12 @@ function PersonForm({ setContacts, setResults, contacts, results }) {
       number: newNumber,
     };
 
-    setContacts([...contacts, newNameObj]);
-    setResults([...results, newNameObj]);
-    setNewName("");
-    setNewNumber("");
+    personService.create(newNameObj).then((response) => {
+      setContacts([...contacts, response.data]);
+      setResults([...results, response.data]);
+      setNewName("");
+      setNewNumber("");
+    });
   };
 
   const handleNewName = (event) => {
