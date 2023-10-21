@@ -42,8 +42,11 @@ function App() {
         {results.map((contact) => (
           <Person
             key={contact.id}
-            name={contact.name}
-            number={contact.number}
+            contact={contact}
+            contacts={contacts}
+            results={results}
+            setContacts={setContacts}
+            setResults={setResults}
           />
         ))}
       </ul>
