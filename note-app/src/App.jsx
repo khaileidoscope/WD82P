@@ -2,9 +2,23 @@ import { useState } from "react";
 import "./App.css";
 
 function App(props) {
-  const [notes, setNotes] = useState(props.notes);
+  const [notes, setNotes] = useState([]);
+  const [newNote, setNewNote] = useState("");
 
-  const [courses, setCourse] = useState(props.courses);
+  const addNote = (event) => {
+    event.preventDefault();
+    const noteObject = {
+      content: newNote,
+      important: false,
+      id: notes.length + 1,
+    };
+    setNotes(notes.concat(noteObject));
+    setNewNote("");
+  };
+
+  const handleNoteChange = (event) => {
+    setNewNote(event.target.value);
+  };
 
   return (
     <div>
@@ -14,36 +28,10 @@ function App(props) {
           <li key={note.id}>{note.content}</li>
         ))}
       </ul>
-
-      {/* <h1>Web development curriculum</h1>
-      <h2 key={courses.id}>{courses[0].name}</h2>
-        {courses[0].parts.map((part) => (
-          <p key={part.id}>{part.name} {part.exercises}</p>
-        ))}
-      <h3>total of {courses[0].parts.reduce((total, part) => total + part.exercises, 0)} exercises</h3>
-
-      <h2 key={courses.id}>{courses[1].name}</h2>
-      {courses[1].parts.map((part) => (
-        <p key={part.id}>{part.name} {part.exercises}</p>
-      ))}
-      <h3>total of {courses[1].parts.reduce((total, part) => total + part.exercises, 0)} exercises</h3> */}
-
-      <h1>Web development curriculum</h1>
-      {courses.map((course, index) => (
-        <div key={index}>
-          <h2>{course.name}</h2>
-          {course.parts.map((part) => (
-            <p key={part.id}>
-              {part.name} {part.exercises}
-            </p>
-          ))}
-          <h3>
-            total of{" "}
-            {course.parts.reduce((total, part) => total + part.exercises, 0)}{" "}
-            exercises
-          </h3>
-        </div>
-      ))}
+      <form onSubmit={addNote}>
+        <input value={newNote} onChange={handleNoteChange} type="text" />
+        <button type="submit">save</button>
+      </form>
     </div>
   );
 }

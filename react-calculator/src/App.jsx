@@ -25,7 +25,12 @@ function App() {
 
   return (
     <div>
-      <input value={result} type="text" onChange={handleInputChange} />
+      <input
+        value={result}
+        type="text"
+        onChange={handleInputChange}
+        placeholder="0"
+      />
       <button className="clear" onClick={clear}>
         C
       </button>
@@ -42,7 +47,7 @@ function App() {
         *
       </button>
       <button name="/" className="divide" onClick={handleClick}>
-        /
+        ÷
       </button>
       {numbers.map((number) => {
         if (number === 0) {
