@@ -42,8 +42,27 @@ app.get("/", (request, response) => {
   response.send("<h1>Hello, Express!</h1>");
 });
 
+app.get("/api/notes/:id", (request, response) => {
+  const id = Number(request.params.id);
+  const note = notes.find((note) => note.id === id);
+  response.json(note);
+});
+
 app.get("/api/notes", (request, response) => {
   response.json(notes);
+});
+
+app.post("/api/notes/:id", (request, response) => {
+  const note = request.body;
+  notes = [...notes, note];
+  response.json(note);
+});
+
+app.delete("/api/notes/:id", (request, response) => {
+  const id = Number(request.params.id);
+  notes = notes.filter((note) => note.id !== id);
+
+  response.status(204).end();
 });
 
 app.listen(PORT, () => {
