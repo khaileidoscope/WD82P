@@ -28,6 +28,11 @@ let notes = [
   },
 ];
 
+function generateId() {
+  const maxId = notes.length > 0 ? Math.max(...notes.map((n) => n.id)) : 0;
+  return maxId + 1;
+}
+
 /**
  * RESTFUL API
  * ROUTES           HTTP    ACTION                                    STATUS
@@ -63,10 +68,11 @@ app.post("/api/notes", (request, response) => {
     });
   }
 
-  const maxId = notes.length > 0 ? Math.max(...notes.map((n) => n.id)) : 0;
-
-  const note = body;
-  note.id = maxId + 1;
+  const note = {
+    content: body.content,
+    important: body.important || false,
+    id: generateId(),
+  };
 
   notes = notes.concat(note);
 
