@@ -3,6 +3,8 @@ import express from "express";
 const app = express();
 const PORT = 3001;
 
+app.use(express.json());
+
 let notes = [
   {
     id: 1,
@@ -21,19 +23,19 @@ let notes = [
   },
   {
     id: 4,
-    content: "PUT and DELETe is also important",
+    content: "PUT and DELETE is also important",
     important: false,
   },
 ];
 
 /**
  * RESTFUL API
- * ROUTES           HTTP    ACTION
+ * ROUTES           HTTP    ACTION                                    STATUS
  *
- * api/notes/:id    GET     fetches a single resource
- * api/notes        GET     fetches all resources
- * api/notes        POST    creates a new resource
- * api/notes/:id    DELETE  deletes a single resource
+ * api/notes/:id    GET     fetches a single resource               200 OK
+ * api/notes        GET     fetches all resources                   200 Ok
+ * api/notes        POST    creates a new resource                  201 Created
+ * api/notes/:id    DELETE  deletes a single resource               204 No Content
  * api/notes/:id    PUT     updates/replaces a single resource
  * api/notes/:id    PATCH   updates/replaces a part of the specified resource
  */
@@ -52,10 +54,23 @@ app.get("/api/notes", (request, response) => {
   response.json(notes);
 });
 
-app.post("/api/notes/:id", (request, response) => {
-  const note = request.body;
-  notes = [...notes, note];
-  response.json(note);
+app.post("/api/notes", (request, response) => {
+  const body = request.body;
+
+  if (!body.content) {
+    return response.status(400).json({
+      error: "content missing",
+    });
+  }
+
+  const maxId = notes.length > 0 ? Math.max(...notes.map((n) => n.id)) : 0;
+
+  const note = body;
+  note.id = maxId + 1;
+
+  notes = notes.concat(note);
+
+  response.status(201).json(note);
 });
 
 app.delete("/api/notes/:id", (request, response) => {
