@@ -1,0 +1,49 @@
+.uwu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3rem 0;
+  width: 100%;
+  max-width: 680px;
+}
+
+.add-contact-ctr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 5rem;
+}
+
+dialog {
+  position: fixed;
+  top: 13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem 1rem;
+}
+
+.modal-ctr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
