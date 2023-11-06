@@ -2,7 +2,13 @@ import axios from "axios";
 import { useState } from "react";
 import personService from "../services/persons";
 
-function PersonForm({ setContacts, setResults, contacts, results }) {
+function PersonForm({
+  setContacts,
+  setResults,
+  contacts,
+  results,
+  setNotification,
+}) {
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
 
@@ -18,6 +24,12 @@ function PersonForm({ setContacts, setResults, contacts, results }) {
     personService.create(newNameObj).then((response) => {
       setContacts([...contacts, response.data]);
       setResults([...results, response.data]);
+      setNotification(`Added ${response.data.name}`);
+
+      setTimeout(() => {
+        setNotification("");
+      }, 3000);
+
       setNewName("");
       setNewNumber("");
     });
